@@ -20,7 +20,7 @@ const SelectUserModal = ({
 				<View style={SelectUserModalStyles.modalView}>
 					<View style={SelectUserModalStyles.modalHeader}>
 						<Text style={SelectUserModalStyles.headerText}>Select Child</Text>
-						<TouchableOpacity onPress={selectUserCloseHandler}>
+						<TouchableOpacity onPress={() => selectUserCloseHandler(index)}>
 							<View style={SelectUserModalStyles.closeIconContainer}>
 								<Text style={SelectUserModalStyles.closeText}>X</Text>
 							</View>

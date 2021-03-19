@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Color from '../../utils/Color';
-const GamesUnlockedHeaderStyles = StyleSheet.create({
+const GameCompletionReportHeaderStyles = StyleSheet.create({
 	guContainer: {
 		flexDirection: 'row',
 		height: 40,
@@ -40,26 +40,21 @@ const GamesUnlockedHeaderStyles = StyleSheet.create({
 		opacity: 0.8,
 	},
 	gameScroll: {
-		width: '50%',
+		width: '40%',
 		height: 50,
 		flexDirection: 'row',
 		alignItems: 'center',
 	},
 	iconContainer: {
-		width: '15%',
+		width: '20%',
 		height: '100%',
+		justifyContent: 'center',
 	},
 	icon: {
 		width: '100%',
-		height: '100%',
-	},
-	arrowContainer: {
-		height: '60%',
-		width: '10%',
+		height: '80%',
 	},
 	textContainer: {
-		flex: 1,
-		alignItems: 'center',
 		textAlignVertical: 'center',
 	},
 	title: {
@@ -79,4 +74,4 @@ const GamesUnlockedHeaderStyles = StyleSheet.create({
 	},
 });
 
-export default GamesUnlockedHeaderStyles;
+export default GameCompletionReportHeaderStyles;

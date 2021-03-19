@@ -3,11 +3,19 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import GamesUnlockedTableEntryStyles from './GamesUnlockedTableEntry.Styles';
 import GamesUnlockedStyles from '../../Pages/GamesUnlocked/GamesUnlocked.Styles';
 import GamesUnlockedTableEntryDropDown from '../GamesUnlockedTableEntryDropDown/GamesUnlockedTableEntryDropDown';
-
+import RestartGameModal from '../RestartGameModal/RestartGameModal';
 const GamesUnlockedTableEntry = ({ game }) => {
 	const [showDrop, setShowDrop] = useState(false);
+	const [showRestartModal, setShowRestartModal] = useState(false);
+
 	return (
 		<View style={GamesUnlockedTableEntryStyles.mainContainer}>
+			<RestartGameModal
+				modalVisible={showRestartModal}
+				selectUserCloseHandler={() => setShowRestartModal(false)}
+				gameName={game.name}
+				level={game.levelCompletionStatus}
+			/>
 			<View style={GamesUnlockedTableEntryStyles.entryContainer}>
 				<Text
 					style={[
@@ -77,11 +85,13 @@ const GamesUnlockedTableEntry = ({ game }) => {
 						style={GamesUnlockedTableEntryStyles.reportIcon}
 						resizeMode="contain"
 					/>
-					<Image
-						source={require('../../assets/refresh-icon.png')}
-						style={GamesUnlockedTableEntryStyles.reportIcon}
-						resizeMode="contain"
-					/>
+					<TouchableOpacity onPress={() => setShowRestartModal(true)}>
+						<Image
+							source={require('../../assets/refresh-icon.png')}
+							style={GamesUnlockedTableEntryStyles.reportIcon}
+							resizeMode="contain"
+						/>
+					</TouchableOpacity>
 					<TouchableOpacity onPress={() => setShowDrop((prev) => !prev)}>
 						{!showDrop && (
 							<Image

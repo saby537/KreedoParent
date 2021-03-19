@@ -2,13 +2,13 @@ import { StyleSheet } from 'react-native';
 import Color from '../../utils/Color';
 const GamesUnlockedStyles = StyleSheet.create({
 	mainContainer: {
-		width: '90%',
-		marginTop: 20,
 		flex: 1,
+		paddingHorizontal: '5%',
+		marginTop: 20,
 	},
 	tableContainer: {
 		width: '100%',
-		marginTop: 10,
+		marginTop: 15,
 		flex: 1,
 		marginBottom: 10,
 	},

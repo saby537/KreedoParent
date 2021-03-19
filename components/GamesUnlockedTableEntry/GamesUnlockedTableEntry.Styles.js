@@ -14,7 +14,7 @@ const GamesUnlockedTableEntryStyles = StyleSheet.create({
 		borderColor: Color.SKY_BLUE,
 		backgroundColor: Color.WHITE,
 		borderWidth: 0.5,
-		fontSize: 16,
+		fontSize: 14,
 		textAlignVertical: 'center',
 	},
 	actionColumn: {

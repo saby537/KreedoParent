@@ -4,7 +4,7 @@ const NameTagStyles = StyleSheet.create({
 	nameContainer: {
 		flexDirection: 'row',
 		height: 40,
-		width: 200,
+		width: 220,
 		alignItems: 'center',
 		padding: 5,
 		marginTop: 15,

@@ -60,6 +60,7 @@ const GamesUnlockedHeader = () => {
 						resizeMode="contain"
 					/>
 				</View>
+				<View style={GamesUnlockedHeaderStyles.iconContainer} />
 			</View>
 			<View style={GamesUnlockedHeaderStyles.homeIconContainer}>
 				<Image

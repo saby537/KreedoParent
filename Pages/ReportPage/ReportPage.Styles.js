@@ -2,9 +2,8 @@ import { StyleSheet } from 'react-native';
 import Color from '../../utils/Color';
 const ReportPageStyles = StyleSheet.create({
 	reportContainer: {
-		backgroundColor: Color.SKY_BLUE,
 		flex: 1,
-		width: '100%',
+		paddingHorizontal: '5%',
 		alignItems: 'center',
 	},
 	topContainer: {
@@ -12,29 +11,37 @@ const ReportPageStyles = StyleSheet.create({
 		height: '15%',
 		flexDirection: 'row',
 		alignItems: 'flex-start',
+		justifyContent: 'center',
 	},
 	nameTagContainer: {
 		flex: 1,
-		marginTop: 20,
-		flexDirection: 'row',
-		flexWrap: 'wrap',
-		justifyContent: 'space-evenly',
+		height: '100%',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	userIcon: {
+		marginTop: -8,
+		marginLeft: 20,
+		width: 17,
+		height: 17,
+		zIndex: 10,
+		opacity: 0.8,
 	},
 	homeIconContainer: {
 		width: '9%',
 		height: '100%',
-		marginTop: 20,
 		padding: 5,
 		backgroundColor: Color.SKY_BLUE,
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
 	homeIcon: {
-		width: '80%',
-		height: '80%',
+		marginTop: 10,
+		width: '90%',
+		height: '90%',
 	},
 	childStatsContainer: {
-		marginTop: 20,
+		marginTop: 10,
 		width: '80%',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
@@ -90,6 +97,12 @@ const ReportPageStyles = StyleSheet.create({
 		justifyContent: 'flex-start',
 		alignItems: 'center',
 		padding: 5,
+	},
+	TouchableOption: {
+		flex: 1,
+		flexDirection: 'row',
+		justifyContent: 'flex-start',
+		alignItems: 'center',
 	},
 	ReportIconContainer: {
 		width: '15%',

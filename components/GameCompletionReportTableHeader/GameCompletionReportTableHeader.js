@@ -1,0 +1,116 @@
+import React from 'react';
+import { Text, View } from 'react-native';
+import GameCompletionReportTableHeaderStyles from './GameCompletionReportTableHeader.Styles';
+import GameCompletionReportStyles from '../../Pages/GameCompletionReport/GameCompletionReport.Styles';
+
+const GameCompletionReportTableHeader = (props) => {
+	return (
+		<View style={GameCompletionReportTableHeaderStyles.headerContainer}>
+			<Text
+				style={[
+					GameCompletionReportStyles.col1,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Game Name
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col2,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Jan
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col3,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Feb
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col4,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Mar
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col5,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Apr
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col6,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				May
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col7,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Jun
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col8,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Jul
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col9,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Aug
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col10,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Sep
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col11,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Oct
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col12,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Nov
+			</Text>
+			<Text
+				style={[
+					GameCompletionReportStyles.col13,
+					GameCompletionReportTableHeaderStyles.headerColumn,
+				]}
+			>
+				Dec
+			</Text>
+		</View>
+	);
+};
+export default GameCompletionReportTableHeader;

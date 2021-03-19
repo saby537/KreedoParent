@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import ReportPage from './Pages/ReportPage/ReportPage';
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import HeaderIcon from './HeaderIcon';
+import HeaderStyles from './Header.Styles';
 export default function Header() {
+	const [curIndex, setCurIndex] = useState(1);
+	const indArr = [0, 1, 2, 3, 4, 5, 6, 7];
 	return (
-		<View style={styles.container}>
-			<ReportPage />
+		<View style={HeaderStyles.mainContainer}>
+			{indArr.map((i) => (
+				<HeaderIcon
+					key={i}
+					index={i}
+					active={curIndex === i}
+					onClickHandler={() => setCurIndex(i)}
+				/>
+			))}
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-});

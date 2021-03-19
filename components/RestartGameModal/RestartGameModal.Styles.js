@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Color from '../../utils/Color';
-const SelectUserModalStyles = StyleSheet.create({
+const RestartGameModalStyles = StyleSheet.create({
 	centeredView: {
 		flex: 1,
 		justifyContent: 'center',
@@ -10,7 +10,7 @@ const SelectUserModalStyles = StyleSheet.create({
 	modalView: {
 		margin: 20,
 		width: '80%',
-		backgroundColor: Color.SKY_BLUE,
+		backgroundColor: Color.WHITE,
 		borderColor: Color.DARK_BLUE,
 		borderWidth: 2,
 		borderRadius: 10,
@@ -58,11 +58,9 @@ const SelectUserModalStyles = StyleSheet.create({
 		fontWeight: 'bold',
 		fontSize: 20,
 	},
-	nameTagView: {
-		padding: 20,
-		flexDirection: 'row',
-		flexWrap: 'wrap',
-		justifyContent: 'space-around',
+	buttonView: {
+		padding: 10,
+		width: '90%',
 		alignItems: 'center',
 	},
 	button: {
@@ -81,4 +79,4 @@ const SelectUserModalStyles = StyleSheet.create({
 	},
 });
 
-export default SelectUserModalStyles;
+export default RestartGameModalStyles;
