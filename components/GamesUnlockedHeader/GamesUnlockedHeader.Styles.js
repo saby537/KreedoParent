@@ -40,13 +40,13 @@ const GamesUnlockedHeaderStyles = StyleSheet.create({
 		opacity: 0.8,
 	},
 	gameScroll: {
-		width: '50%',
+		width: '60%',
 		height: 50,
 		flexDirection: 'row',
 		alignItems: 'center',
 	},
 	iconContainer: {
-		width: '15%',
+		width: '10%',
 		height: '100%',
 	},
 	icon: {
@@ -54,7 +54,7 @@ const GamesUnlockedHeaderStyles = StyleSheet.create({
 		height: '100%',
 	},
 	arrowContainer: {
-		height: '60%',
+		height: '45%',
 		width: '10%',
 	},
 	textContainer: {

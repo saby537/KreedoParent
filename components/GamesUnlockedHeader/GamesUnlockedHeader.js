@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, Touchable } from 'react-native';
 import GamesUnlockedHeaderStyles from './GamesUnlockedHeader.Styles';
 import { NameDetails } from '../../Pages/ReportPage/ReportPageData';
 import SelectUserModal from '../SelectUserModal/SelectUserModal';
-const GamesUnlockedHeader = () => {
+const GamesUnlockedHeader = ({ navigation, id }) => {
 	const [showUserModal, setShowUserModal] = useState(false);
 	const [currentChild, setCurrentChild] = useState(0);
 	const selectUserCloseHandler = (id) => {
@@ -43,23 +43,39 @@ const GamesUnlockedHeader = () => {
 						resizeMode="contain"
 					/>
 				</View>
-				<View style={GamesUnlockedHeaderStyles.arrowContainer}>
+				<TouchableOpacity
+					style={GamesUnlockedHeaderStyles.arrowContainer}
+					onPress={() =>
+						navigation.navigate({
+							routeName: 'GamesUnlocked',
+						})
+					}
+				>
 					<Image
 						source={require('../../assets/left-white-triangle-arrow.png')}
 						style={GamesUnlockedHeaderStyles.icon}
 						resizeMode="contain"
 					/>
-				</View>
+				</TouchableOpacity>
 				<View style={GamesUnlockedHeaderStyles.textContainer}>
-					<Text style={GamesUnlockedHeaderStyles.title}>Games Unlocked</Text>
+					<Text style={GamesUnlockedHeaderStyles.title}>
+						{id === 1 ? 'Games Unlocked' : 'Games not yet started'}
+					</Text>
 				</View>
-				<View style={GamesUnlockedHeaderStyles.arrowContainer}>
+				<TouchableOpacity
+					style={GamesUnlockedHeaderStyles.arrowContainer}
+					onPress={() =>
+						navigation.navigate({
+							routeName: 'GamesNotYetStarted',
+						})
+					}
+				>
 					<Image
 						source={require('../../assets/right-white-triangle-arrow.png')}
 						style={GamesUnlockedHeaderStyles.icon}
 						resizeMode="contain"
 					/>
-				</View>
+				</TouchableOpacity>
 				<View style={GamesUnlockedHeaderStyles.iconContainer} />
 			</View>
 			<View style={GamesUnlockedHeaderStyles.homeIconContainer}>

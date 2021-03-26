@@ -12,11 +12,21 @@ const Images = [
 	require('../../assets/share-icon-header.png'),
 	require('../../assets/about-icon-header.png'),
 ];
+const PageIndex = [
+	'Report',
+	'Report',
+	'Report',
+	'Report',
+	'Report',
+	'Report',
+	'Report',
+	'Report',
+];
 export default function HeaderIcon({ index, active, onClickHandler }) {
 	return (
 		<TouchableOpacity
 			activeOpacity={0.5}
-			onPress={onClickHandler}
+			onPress={() => onClickHandler(PageIndex[index])}
 			style={[
 				HeaderStyles.touchableContainer,
 				active ? HeaderStyles.activeTouchable : '',

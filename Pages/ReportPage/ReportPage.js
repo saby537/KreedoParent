@@ -20,7 +20,7 @@ const ReportPage = ({ navigation }) => {
 	};
 	return (
 		<View style={styles.container}>
-			<Header />
+			<Header navigation={navigation} />
 			<View style={ReportPageStyles.reportContainer}>
 				<SelectUserModal
 					modalVisible={showUserModal}
@@ -96,7 +96,7 @@ const ReportPage = ({ navigation }) => {
 							style={ReportPageStyles.GameStats}
 							onPress={() =>
 								navigation.navigate({
-									routeName: 'GamesCompleted',
+									routeName: 'GamesUnlocked',
 								})
 							}
 						>

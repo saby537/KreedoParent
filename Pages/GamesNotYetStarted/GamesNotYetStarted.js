@@ -2,23 +2,23 @@ import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import Color from '../../utils/Color';
 import Header from '../../components/Header/Header';
-import { GamesUnlockedData } from './GamesUnlockedData';
+import { GamesNotYetStartedData } from './GamesNotYetStartedData';
 import GamesUnlockedHeader from '../../components/GamesUnlockedHeader/GamesUnlockedHeader';
 import GamesUnlockedTableHeader from '../../components/GamesUnlockedTableHeader/GamesUnlockedTableHeader';
-import GamesUnlockedTableEntry from '../../components/GamesUnlockedTableEntry/GamesUnlockedTableEntry';
-import GamesUnlockedStyles from './GamesUnlocked.Styles';
+import GamesNotYetStartedTableEntry from '../../components/GamesNotYetStartedTableEntry/GamesNotYetStartedTableEntry';
+import GamesNotYetStartedStyles from './GamesNotYetStarted.Styles';
 
-const GamesUnlocked = ({ navigation }) => {
+const GamesNotYetStarted = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<Header navigation={navigation} />
-			<View style={GamesUnlockedStyles.mainContainer}>
-				<GamesUnlockedHeader navigation={navigation} id={1} />
-				<View style={GamesUnlockedStyles.tableContainer}>
+			<View style={GamesNotYetStartedStyles.mainContainer}>
+				<GamesUnlockedHeader navigation={navigation} id={2} />
+				<View style={GamesNotYetStartedStyles.tableContainer}>
 					<GamesUnlockedTableHeader />
 					<ScrollView>
-						{GamesUnlockedData.map((game, id) => (
-							<GamesUnlockedTableEntry game={game} key={id} />
+						{GamesNotYetStartedData.map((name, id) => (
+							<GamesNotYetStartedTableEntry name={name} key={id} />
 						))}
 					</ScrollView>
 				</View>
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 });
-export default GamesUnlocked;
+export default GamesNotYetStarted;

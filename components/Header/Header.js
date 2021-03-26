@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 import HeaderIcon from './HeaderIcon';
 import HeaderStyles from './Header.Styles';
-export default function Header() {
+const Header = ({ navigation }) => {
 	const [curIndex, setCurIndex] = useState(1);
 	const indArr = [0, 1, 2, 3, 4, 5, 6, 7];
 	return (
@@ -12,9 +12,15 @@ export default function Header() {
 					key={i}
 					index={i}
 					active={curIndex === i}
-					onClickHandler={() => setCurIndex(i)}
+					onClickHandler={(page) => {
+						setCurIndex(i);
+						navigation.navigate({
+							routeName: page,
+						});
+					}}
 				/>
 			))}
 		</View>
 	);
-}
+};
+export default Header;

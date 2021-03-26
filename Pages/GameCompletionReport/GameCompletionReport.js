@@ -7,10 +7,10 @@ import GameCompletionReportTableHeader from '../../components/GameCompletionRepo
 import GameCompletionReportTableEntry from '../../components/GameCompletionReportTableEntry/GameCompletionReportTableEntry';
 import GameCompletionReportStyles from './GameCompletionReport.Styles';
 import GameCompletionData from './GameCompletionData';
-const GameCompletionReport = (props) => {
+const GameCompletionReport = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
-			<Header />
+			<Header navigation={navigation} />
 			<View style={GameCompletionReportStyles.mainContainer}>
 				<GameCompletionReportHeader />
 				<View style={GameCompletionReportStyles.tableContainer}>
