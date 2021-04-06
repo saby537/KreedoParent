@@ -3,6 +3,9 @@ import { View, Text, Image, TouchableOpacity, Touchable } from 'react-native';
 import GamesUnlockedHeaderStyles from './GamesUnlockedHeader.Styles';
 import { NameDetails } from '../../Pages/ReportPage/ReportPageData';
 import SelectUserModal from '../SelectUserModal/SelectUserModal';
+import DiceIcon from '../../assets/ParentCorner/Reports_Game_Icon.svg';
+import LeftArrowWhite from '../../assets/ParentCorner/Left_NextArrow_Game report date.svg';
+import RightArrowWhite from '../../assets/ParentCorner/Right_NextArrow_Game report date.svg';
 const GamesUnlockedHeader = ({ navigation, id }) => {
 	const [showUserModal, setShowUserModal] = useState(false);
 	const [currentChild, setCurrentChild] = useState(0);
@@ -37,11 +40,7 @@ const GamesUnlockedHeader = ({ navigation, id }) => {
 			</View>
 			<View style={GamesUnlockedHeaderStyles.gameScroll}>
 				<View style={GamesUnlockedHeaderStyles.iconContainer}>
-					<Image
-						source={require('../../assets/dice-icon.png')}
-						style={GamesUnlockedHeaderStyles.icon}
-						resizeMode="contain"
-					/>
+					<DiceIcon width={'100%'} height={'100%'} />
 				</View>
 				<TouchableOpacity
 					style={GamesUnlockedHeaderStyles.arrowContainer}
@@ -51,11 +50,7 @@ const GamesUnlockedHeader = ({ navigation, id }) => {
 						})
 					}
 				>
-					<Image
-						source={require('../../assets/left-white-triangle-arrow.png')}
-						style={GamesUnlockedHeaderStyles.icon}
-						resizeMode="contain"
-					/>
+					<LeftArrowWhite width={'100%'} height={'100%'} />
 				</TouchableOpacity>
 				<View style={GamesUnlockedHeaderStyles.textContainer}>
 					<Text style={GamesUnlockedHeaderStyles.title}>
@@ -70,11 +65,7 @@ const GamesUnlockedHeader = ({ navigation, id }) => {
 						})
 					}
 				>
-					<Image
-						source={require('../../assets/right-white-triangle-arrow.png')}
-						style={GamesUnlockedHeaderStyles.icon}
-						resizeMode="contain"
-					/>
+					<RightArrowWhite width={'100%'} height={'100%'} />
 				</TouchableOpacity>
 				<View style={GamesUnlockedHeaderStyles.iconContainer} />
 			</View>

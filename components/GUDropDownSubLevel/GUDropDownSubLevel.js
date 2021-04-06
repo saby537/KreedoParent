@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import GUDropDownSubLevelStyles from './GUDropDownSubLevel.Styles';
+import DetailsDrop from '../../assets/ParentCorner/Game report_Details_Inside_drop down_Icon_closed.svg';
+import DetailsHide from '../../assets/ParentCorner/Game report_Details_Inside_drop down_Icon_open.svg';
 
 const GUDropDownSubLevel = ({ attempt }) => {
 	const [showDrop, setShowDrop] = useState(false);
@@ -34,20 +36,8 @@ const GUDropDownSubLevel = ({ attempt }) => {
 						style={GUDropDownSubLevelStyles.touchableContainer}
 						onPress={() => setShowDrop((prev) => !prev)}
 					>
-						{!showDrop && (
-							<Image
-								source={require('../../assets/left-triangle-arrow.png')}
-								style={GUDropDownSubLevelStyles.arrowIcon}
-								resizeMode="contain"
-							/>
-						)}
-						{showDrop && (
-							<Image
-								source={require('../../assets/down-triangle-icon.png')}
-								style={GUDropDownSubLevelStyles.arrowIcon}
-								resizeMode="contain"
-							/>
-						)}
+						{!showDrop && <DetailsDrop width={'100%'} height={'100%'} />}
+						{showDrop && <DetailsHide width={'100%'} height={'100%'} />}
 					</TouchableOpacity>
 				</View>
 			</View>

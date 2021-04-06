@@ -15,13 +15,14 @@ const HeaderStyles = StyleSheet.create({
 		width: '100%',
 		flex: 1,
 		margin: '5%',
-		padding: '5%',
 	},
 	iconContainer: {
 		width: '100%',
 		height: '100%',
 		overflow: 'hidden',
 		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	activeTouchable: {
 		padding: '0%',

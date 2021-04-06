@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image } from 'react-native';
 import GamesNotYetStartedTableEntryStyles from './GamesNotYetStartedTableEntry.Styles';
 import GamesUnlockedStyles from '../../Pages/GamesUnlocked/GamesUnlocked.Styles';
+import EyeIcon from '../../assets/ParentCorner/Profile_Parent_Details_witness.svg';
 const GamesUnlockedTableEntry = ({ name }) => {
 	return (
 		<View style={GamesNotYetStartedTableEntryStyles.mainContainer}>
@@ -69,11 +70,7 @@ const GamesUnlockedTableEntry = ({ name }) => {
 						GamesNotYetStartedTableEntryStyles.actionColumn,
 					]}
 				>
-					<Image
-						source={require('../../assets/eye-icon.png')}
-						style={GamesNotYetStartedTableEntryStyles.reportIcon}
-						resizeMode="contain"
-					/>
+					<EyeIcon width={20} height={20} />
 				</View>
 			</View>
 		</View>

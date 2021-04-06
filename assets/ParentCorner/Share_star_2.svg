@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" viewBox="0 0 6 9">
+  <g id="Group_434" data-name="Group 434" transform="translate(-6300.972 102.708)">
+    <path id="Polygon_18" data-name="Polygon 18" d="M1,0,2,4H0Z" transform="translate(6302.972 -102.708)" fill="#f5427b"/>
+    <path id="Polygon_19" data-name="Polygon 19" d="M1,0,2,2H0Z" transform="translate(6306.972 -100.708) rotate(90)" fill="#f5427b"/>
+    <path id="Polygon_20" data-name="Polygon 20" d="M1,0,2,5H0Z" transform="translate(6304.972 -93.708) rotate(180)" fill="#f5427b"/>
+    <path id="Polygon_21" data-name="Polygon 21" d="M1,0,2,2H0Z" transform="translate(6300.972 -98.708) rotate(-90)" fill="#f5427b"/>
+    <rect id="Rectangle_132" data-name="Rectangle 132" width="2" height="2" transform="translate(6302.972 -100.708)" fill="#f5427b"/>
+  </g>
+</svg>

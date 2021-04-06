@@ -46,7 +46,7 @@ const GamesUnlockedHeaderStyles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	iconContainer: {
-		width: '10%',
+		width: '15%',
 		height: '100%',
 	},
 	icon: {
@@ -54,8 +54,12 @@ const GamesUnlockedHeaderStyles = StyleSheet.create({
 		height: '100%',
 	},
 	arrowContainer: {
-		height: '45%',
+		height: '90%',
 		width: '10%',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		paddingTop: '1.8%',
 	},
 	textContainer: {
 		flex: 1,

@@ -8,6 +8,7 @@ import NameTag from '../../components/NameTag/NameTag';
 import StatsDiv from '../../components/StatsDiv/StatsDiv';
 import Card from '../../components/Card/Card';
 import SelectUserModal from '../../components/SelectUserModal/SelectUserModal';
+import GameCompletionIcon from '../../assets/ParentCorner/Game completion_Icon.svg';
 
 const ReportPage = ({ navigation }) => {
 	const [index, setIndex] = useState(0);
@@ -130,11 +131,7 @@ const ReportPage = ({ navigation }) => {
 								}
 							>
 								<View style={ReportPageStyles.ReportIconContainer}>
-									<Image
-										source={require('../../assets/game_completion_icon.jpg')}
-										style={ReportPageStyles.reportIcon}
-										resizeMode="contain"
-									/>
+									<GameCompletionIcon width={'100%'} height={'100%'} />
 								</View>
 								<Text style={ReportPageStyles.option}>Game Completion</Text>
 							</TouchableOpacity>

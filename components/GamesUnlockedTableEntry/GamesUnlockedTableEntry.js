@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import GamesUnlockedTableEntryStyles from './GamesUnlockedTableEntry.Styles';
 import GamesUnlockedStyles from '../../Pages/GamesUnlocked/GamesUnlocked.Styles';
 import GamesUnlockedTableEntryDropDown from '../GamesUnlockedTableEntryDropDown/GamesUnlockedTableEntryDropDown';
 import RestartGameModal from '../RestartGameModal/RestartGameModal';
+import ShowDropDown from '../../assets/ParentCorner/Game report_Drop down icon_Down.svg';
+import HideDropDown from '../../assets/ParentCorner/Game report_Drop down icon_UP.svg';
+import GameReset from '../../assets/ParentCorner/Game_Reset_icon.svg';
+import EyeIcon from '../../assets/ParentCorner/Profile_Parent_Details_witness.svg';
+
 const GamesUnlockedTableEntry = ({ game }) => {
 	const [showDrop, setShowDrop] = useState(false);
 	const [showRestartModal, setShowRestartModal] = useState(false);
@@ -80,33 +85,13 @@ const GamesUnlockedTableEntry = ({ game }) => {
 						GamesUnlockedTableEntryStyles.actionColumn,
 					]}
 				>
-					<Image
-						source={require('../../assets/eye-icon.png')}
-						style={GamesUnlockedTableEntryStyles.reportIcon}
-						resizeMode="contain"
-					/>
+					<EyeIcon width={20} height={20} />
 					<TouchableOpacity onPress={() => setShowRestartModal(true)}>
-						<Image
-							source={require('../../assets/refresh-icon.png')}
-							style={GamesUnlockedTableEntryStyles.reportIcon}
-							resizeMode="contain"
-						/>
+						<GameReset width={20} height={20} />
 					</TouchableOpacity>
 					<TouchableOpacity onPress={() => setShowDrop((prev) => !prev)}>
-						{!showDrop && (
-							<Image
-								source={require('../../assets/down-arrow-icon.png')}
-								style={GamesUnlockedTableEntryStyles.reportIcon}
-								resizeMode="contain"
-							/>
-						)}
-						{showDrop && (
-							<Image
-								source={require('../../assets/up-arrow-icon.png')}
-								style={GamesUnlockedTableEntryStyles.reportIcon}
-								resizeMode="contain"
-							/>
-						)}
+						{!showDrop && <ShowDropDown width={20} height={20} />}
+						{showDrop && <HideDropDown width={20} height={20} />}
 					</TouchableOpacity>
 				</View>
 			</View>

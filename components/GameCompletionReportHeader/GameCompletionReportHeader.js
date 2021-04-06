@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableOpacity, Touchable } from 'react-native';
 import GameCompletionReportHeaderStyles from './GameCompletionReportHeader.Styles';
 import { NameDetails } from '../../Pages/ReportPage/ReportPageData';
 import SelectUserModal from '../SelectUserModal/SelectUserModal';
+import GameCompletionIcon from '../../assets/ParentCorner/Game completion_Icon.svg';
 const GameCompletionReportHeader = () => {
 	const [showUserModal, setShowUserModal] = useState(false);
 	const [currentChild, setCurrentChild] = useState(0);
@@ -36,11 +37,7 @@ const GameCompletionReportHeader = () => {
 			</View>
 			<View style={GameCompletionReportHeaderStyles.gameScroll}>
 				<View style={GameCompletionReportHeaderStyles.iconContainer}>
-					<Image
-						source={require('../../assets/game_completion_icon.jpg')}
-						style={GameCompletionReportHeaderStyles.icon}
-						resizeMode="contain"
-					/>
+					<GameCompletionIcon width={'100%'} height={'80%'} />
 				</View>
 				<View style={GameCompletionReportHeaderStyles.textContainer}>
 					<Text style={GameCompletionReportHeaderStyles.title}>
